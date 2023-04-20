@@ -95,7 +95,13 @@ svg{
 }
 
 </style>
-    <svg viewBox="0 0 100 100" width="300" height="300" style="background:white">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Galgje</h1>
+	    <svg viewBox="0 0 100 100" width="300" height="300" style="background:white">
       <style>
         svg>* {
           stroke-width: 4;
@@ -113,12 +119,6 @@ svg{
       <line x1="50" y1="20" x2="50" y2="60" stroke="black" class="hangman" />
       <circle cx="50" cy="20" r="10" class="hangman" />
     </svg>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-
-  <body>
-    <div class="container">
-      <h1>Galgje</h1>
       <div id="word"></div>
       <div id="letters"></div>
       <div id="chances"></div>
