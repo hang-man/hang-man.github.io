@@ -15,6 +15,8 @@ visibility: hidden;
 
 
 .container {
+    display: flex;
+    flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
@@ -82,7 +84,7 @@ svg{
 }
 
 .letter {
-  width: 40px;
+  width: 10%;
   }
 
 .key:hover {
@@ -119,8 +121,6 @@ svg{
       <div id="chances"></div>
       <div id="message"></div>
       <button id="reset">Nieuw woord</button>
-    </div>
-
       <div class="keyboard">
       <div class="row">
         <button class="key letter">Q</button>
@@ -155,6 +155,7 @@ svg{
         <button class="key letter">M</button>
       </div>
     </div>
+</div>
     
     <script>
  // Lijst met woorden om uit te kiezen
