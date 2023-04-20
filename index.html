@@ -157,8 +157,8 @@ svg{
     </div>
     
     <script>
-        // Lijst met woorden om uit te kiezen
-var words = ["programmeren", "javascript", "computer", "code", "html", "css", "huis", "auto", "fiets", "computer", "telefoon", "tafel", "stoel", "boek", "piano", "gitaar", "afdelingsleider", "belastingdienst", "chronometer", "determineren", "eigendunkelijk", "fascinerend",
+ // Lijst met woorden om uit te kiezen
+var words = ["programmeren", "javascript", "computer", "code", "html", "css", "huis", "auto", "fiets", "computer", "telefoon", "tafel", "stoel", "boek", "piano", "gitaar", "afdelingsleider", "belastingdienst", "chronometer", "determineren", "fascinerend",
   "gebedsruimte", "handpalm", "informatief", "jeugdbescherming", "kantoormedewerker", "leiderschapskwaliteiten",
   "militair", "strategie", "neurotransmitter", "ondernemingsraad", "papieren", "quantummechanica", "regenboogkleuren",
   "straatmuzikant", "tegemoetkomend", "uitgestrekt", "vakantieganger", "wereldkampioenschap", "xylofoonspeler",
@@ -172,8 +172,8 @@ var words = ["programmeren", "javascript", "computer", "code", "html", "css", "h
   "xenofobie", "zelfontplooiing", "anatomie", "bewustwording", "communicatiemiddel", "duurzaamheid", "enthousiasteling",
   "fotografie", "gezondheidszorg", "hoofdtelefoon", "instructeur", "journalist", "klimaatverandering", "luisterboek",
   "misdaadroman", "natuurliefhebber", "onderwijskunde", "politieagent", "quote", "reisleider", "schilderkunst",
-  "televisieserie", "uitvinder", "verzamelaar", "werktuigbouwkunde", "xylofoonmuziek", "yoga", "zeilboot",
-  "architectuur", "bergbeklimmen", "creativiteit", "dansen", "eten", "fotobewerking", "golfsurfen", "hiken",
+  "televisieserie", "uitvinder", "verzamelaar", "werktuigbouwkunde", "yoga", "zeilboot",
+  "architectuur", "bergbeklimmen", "creativiteit", "dansen", "eten", "fotobewerking", "golfsurfen",
   "inrichting", "joggen", "kunst", "lezen", "muziek", "natuur", "ontspanning", "trekpop"
 ];
 
@@ -272,18 +272,16 @@ function reset() {
   });
 }
 
-// Voeg event listeners toe aan de knoppenhh
+// Voeg event listeners toe aan de knoppen
 document.getElementById("reset").addEventListener("click", reset);
 
-function keyupListener(event){
+function keyupListener(event) {
   if (event.keyCode >= 65 && event.keyCode <= 90 && remainingGuesses) {
     checkGuess(event.key.toLowerCase());
   }
 }
 
-let keyup_listener = document.addEventListener("keyup", (evt) => keyupListener(evt));
-
-      //dit is het virtuele keyboard
+//dit is het virtuele keyboard
 
 let keyup_listener = document.addEventListener("keyup", (evt) => keyupListener(evt));
 
@@ -303,6 +301,7 @@ keys.forEach(key => {
     // Insert the value into the input field
   });
 });
+
       
     </script>
   </body>
