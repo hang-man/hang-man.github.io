@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8">
     <title>Hang-Man</title>
-    <style>.container {
+    <style>.
+      
+@media screen and (min-width: 768px) {
+  .keyboard {
+visibility: hidden;
+}
+}
+
+
+.container {
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
@@ -47,6 +56,39 @@ svg{
   margin: auto;
 }
 
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.key {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  cursor: pointer;
+}
+
+.letter {
+  width: 40px;
+  }
+
+.key:hover {
+  background-color: #f0f0f0;
+}
+
 </style>
     <svg viewBox="0 0 100 100" width="300" height="300" style="background:white">
       <style>
@@ -79,6 +121,41 @@ svg{
       <button id="reset">Nieuw woord</button>
     </div>
 
+      <div class="keyboard">
+      <div class="row">
+        <button class="key letter">Q</button>
+        <button class="key letter">W</button>
+        <button class="key letter">E</button>
+        <button class="key letter">R</button>
+        <button class="key letter">T</button>
+        <button class="key letter">Y</button>
+        <button class="key letter">U</button>
+        <button class="key letter">I</button>
+        <button class="key letter">O</button>
+        <button class="key letter">P</button>
+      </div>
+      <div class="row">
+        <button class="key letter">A</button>
+        <button class="key letter">S</button>
+        <button class="key letter">D</button>
+        <button class="key letter">F</button>
+        <button class="key letter">G</button>
+        <button class="key letter">H</button>
+        <button class="key letter">J</button>
+        <button class="key letter">K</button>
+        <button class="key letter">L</button>
+      </div>
+      <div class="row">
+        <button class="key letter">Z</button>
+        <button class="key letter">X</button>
+        <button class="key letter">C</button>
+        <button class="key letter">V</button>
+        <button class="key letter">B</button>
+        <button class="key letter">N</button>
+        <button class="key letter">M</button>
+      </div>
+    </div>
+    
     <script>
         // Lijst met woorden om uit te kiezen
 var words = ["programmeren", "javascript", "computer", "code", "html", "css", "huis", "auto", "fiets", "computer", "telefoon", "tafel", "stoel", "boek", "piano", "gitaar", "afdelingsleider", "belastingdienst", "chronometer", "determineren", "eigendunkelijk", "fascinerend",
@@ -206,6 +283,27 @@ function keyupListener(event){
 
 let keyup_listener = document.addEventListener("keyup", (evt) => keyupListener(evt));
 
+      //dit is het virtuele keyboard
+
+let keyup_listener = document.addEventListener("keyup", (evt) => keyupListener(evt));
+
+// Select the input field (geen input in html)
+const input = document.querySelector('#word');
+
+// Select all the keys
+const keys = document.querySelectorAll('.key');
+
+// Loop through each key
+keys.forEach(key => {
+  // Add a click event listener
+  key.addEventListener('click', () => {
+    // Get the key's value
+    const value = key.textContent;
+	checkGuess(value.toLowerCase())
+    // Insert the value into the input field
+  });
+});
+      
     </script>
   </body>
 
