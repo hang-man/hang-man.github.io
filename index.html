@@ -7,7 +7,7 @@
     <title>Hang-Man</title>
     <style>.
       
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .keyboard {
 visibility: hidden;
 }
@@ -17,7 +17,6 @@ visibility: hidden;
 .container {
     display: grid;
     grid-template-columns: auto;
-    justify-content: center;
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
@@ -54,6 +53,10 @@ button {
     cursor: pointer;
 }
 
+button:hover{
+  background-color: lightblue;
+}
+
 svg{
   display: grid;
   grid-template-columns: auto;
@@ -62,10 +65,7 @@ svg{
 }
 
 .keyboard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  
   margin-top: 50px;
 }
 
@@ -87,11 +87,11 @@ svg{
 }
 
 .letter {
-  width: 10%;
+  width: 40px;
   }
 
 .key:hover {
-  background-color: #f0f0f0;
+  background-color: lightblue;
 }
 
 </style>
